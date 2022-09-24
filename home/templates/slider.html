@@ -1,0 +1,26 @@
+{% load currency %}
+{% load static %}
+	<!-- HOME -->
+	
+		<!-- container -->
+		
+			<div class="home-wrap">
+				<!-- home slick -->
+				<div id="home-slick">
+
+                    {% for rs in products_slider %}
+                    <!-- banner -->
+					<div class="banner banner-1">
+						<img src="{{ rs.image.url }}" alt="" >
+						
+					</div>
+					<!-- /banner -->
+                    {% endfor %}
+
+				</div>
+				<!-- /home slick -->
+			</div>
+			<!-- /home wrap -->
+		
+	
+	<!-- /HOME -->

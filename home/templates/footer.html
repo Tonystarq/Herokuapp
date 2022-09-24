@@ -1,0 +1,123 @@
+{% load static %}
+	<!-- FOOTER -->
+	<style>
+		::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
+  opacity: 1; /* Firefox */
+}
+	</style>
+	<footer id="footer" class="section section-grey" style="background-color: #000000">
+		<!-- container -->
+		<div class="container">
+			<!-- row -->
+			<div class="row">
+				<!-- footer widget -->
+				<div class="col-md-3 col-sm-6 col-xs-6">
+					<div class="footer">
+						<!-- footer logo -->
+						<div class="footer-logo">
+							<a class="logo" href="#">
+		            <img src="{% static '' %}img/logo_bio.png" alt="">
+		          </a>
+						</div>
+						<!-- /footer logo -->
+
+						<!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna</p> -->
+						<p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3507.2028534522815!2d77.00319061503265!3d28.47343698248086!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d177c64d6d7b7%3A0xead93fa59ac0801!2s2143A%2C%20Huda%20Colony%2C%20Sector%204%2C%20Gurugram%2C%20Haryana%20122001!5e0!3m2!1sen!2sin!4v1662628747681!5m2!1sen!2sin" width="200" height="100" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p>
+						<!-- footer social -->
+						<ul class="footer-social">
+							<li><a></a></li>
+							<li><a></a></li>
+							<li><a></a></li>
+							<li><a href="https://www.facebook.com/bioritehealthcare" style="color: #3b5998"><i class="fa fa-facebook fa-2x"></i></a></li>
+							<li><a href="https://twitter.com/BioriteH"  style="color: #1DA1F2"><i class="fa fa-twitter fa-2x"></i></a></li>
+							<li><a href="https://www.instagram.com/bioritehealthcare/?hl=en"  style="color: #e95950"><i class="fa fa-instagram fa-2x"></i></a></li>
+						</ul>
+						<!-- /footer social -->
+					</div>
+				</div>
+				<!-- /footer widget -->
+
+				<!-- footer widget -->
+				<div class="col-md-3 col-sm-6 col-xs-6">
+					<div class="footer">
+						<h3 class="footer-header" style="color: white">My Account</h3>
+						<ul class="list-links">
+							<li><a  href="{% url 'aboutus' %}" style="color: white;">Account Info</a></li>
+							<!-- <li><a href="#" style="color: white;">Compare</a></li> -->
+							<!-- <li><a href="#" style="color: white;">Shiping Guide</a></li> -->
+							<li><a href="{% url 'shopcart'%}" style="color: white;">Checkout</a></li>
+							<li><a></a></li>
+							<li><a></a></li>
+							<p style="color: white;" class="fa fa-map-marker" aria-hidden="true">  Address : Plot No 138/20 Om Nagar Sec 11 Gurgaon Haryana 122001</p>
+							<!-- <li><a href="#" style="color: white;">Login</a></li> -->
+							<p style="color: white;"  class="fa fa-phone" aria-hidden="true"> +91 9999531838</p>
+							<p style="color: white;"  class="fa fa-envelope" aria-hidden="true"> info@bioritehealthcare.com</p>
+						</ul>
+					</div>
+				</div>
+				
+				<!-- /footer widget -->
+
+				<div class="clearfix visible-sm visible-xs"></div>
+
+				<!-- footer widget -->
+				<div class="col-md-3 col-sm-6 col-xs-6">
+					<div class="footer">
+						<h3 class="footer-header" style="color: white">Customer Service</h3>
+						<ul class="list-links">
+							<li><a  href="{% url 'aboutus' %}" style="color: white;">About Us</a></li>
+							<li><a href="#" style="color: white;">Shipping & Return</a></li>
+							<li><a href="#" style="color: white;">Shipping Guide</a></li>
+							<li><a href="{% url 'ourteam' %}" style="color: white;">Our Team</a></li>
+							<li><a href="{% url 'faq' %}" style="color: white;">FAQ</a></li>
+						</ul>
+					</div>
+				</div>
+				<!-- /footer widget -->
+
+				<!-- footer subscribe -->
+				<div class="col-md-3 col-sm-6 col-xs-6">
+					<div class="footer">
+						<h3 class="footer-header" style="color: white;">Stay Connected</h3>
+						<p style="color: white;">Get Hidden Discount of Products with great deals. 	Join Now!!!</p>
+						<form action="{% url 'newsletter' %}" method="post">
+							{% csrf_token %}
+							<div class="form-group" >
+								<input  type="email" name="email" class="input" placeholder="Enter Email Address" style="color: white;" required>
+								<input type="tel" name="tel" class="input" placeholder="Enter Mobile Number" style="color: white;" required>
+							</div>
+							<button class="primary-btn">Join Newslatter</button>
+						</form>
+					</div>
+				</div>
+				<!-- /footer subscribe -->
+			</div>
+			<!-- /row -->
+			<hr>
+			<!-- row -->
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 text-center">
+					<!-- footer copyright -->
+					<div class="footer-copyright" style="color: white">
+						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+						Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This Website is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a  target="_blank" style="color: white">Team MetaClawd</a>
+						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+					</div>
+					<div style="color: white"> Developed and maintained by <a  href="https://www.linkedin.com/in/manish-yadav-b325667a/"  >Manish Yadav.</a></div>
+					<!-- /footer copyright -->
+				</div>
+			</div>
+			<!-- /row -->
+		</div>
+		<!-- /container -->
+	</footer>
+	<!-- /FOOTER -->
+
+	<!-- jQuery Plugins -->
+
+	<script src="{% static '' %}js/bootstrap.min.js"></script>
+	<script src="{% static '' %}js/slick.min.js"></script>
+	<script src="{% static '' %}js/nouislider.min.js"></script>
+	<script src="{% static '' %}js/jquery.zoom.min.js"></script>
+	<script src="{% static '' %}js/main.js"></script>

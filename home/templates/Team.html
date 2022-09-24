@@ -1,0 +1,574 @@
+{% extends 'homebase.html' %}
+{% load i18n %}
+{% block title %} About Us- {{ setting.title }} {% endblock %}
+{% block description %} {{ setting.description }} {% endblock %}
+{% block keywords %} {{ setting.keywords }} {% endblock %}
+{% load static %}
+
+{% block sidebar %} {% include 'sidebar.html' %} {% endblock %}
+
+{% block body %}
+
+
+
+<style> .icon-block svg{
+    width:100%;
+    height:100%;
+  }
+  .team-card-container{
+    display:flex;
+    row-gap:1.3rem;
+    column-gap:1.3rem;
+  }
+  .text-blk{
+    margin-top:0px;
+    margin-right:0px;
+    margin-bottom:0px;
+    margin-left:0px;
+    padding-top:0px;
+    padding-right:0px;
+    padding-bottom:0px;
+    padding-left:0px;
+    line-height:25px;
+  }
+  #w-c-s-bgc_p-1-dm-id {
+      background-color: #FAF8CD;
+  }
+  *{
+    font-family:Nunito, sans-serif;
+  }
+  .responsive-cell-block{
+    min-height:75px;
+  }
+  .responsive-container-block{
+    min-height:75px;
+    height:fit-content;
+    width:100%;
+    padding-top:0px;
+    padding-right:0px;
+    padding-bottom:0px;
+    padding-left:0px;
+    display:flex;
+    flex-wrap:wrap;
+    margin-top:0px;
+    margin-right:auto;
+    margin-bottom:0px;
+    margin-left:auto;
+    justify-content:flex-start;
+  }
+  .responsive-container-block.container{
+    max-width:1200px;
+    min-height:100vh;
+    margin-top:0px;
+    margin-right:0px;
+    margin-bottom:0px;
+    margin-left:0px;
+    justify-content:center;
+  }
+  .text-blk.section-head{
+    font-size:60px;
+    line-height:70px;
+    margin-top:0px;
+    margin-right:0px;
+    margin-bottom:24px;
+    margin-left:0px;
+  }
+  .text-blk.section-subhead{
+    font-size:14px;
+    line-height:18px;
+    margin-top:0px;
+    margin-right:0px;
+    margin-bottom:64px;
+    margin-left:0px;
+  }
+  .responsive-cell-block.wk-ipadp-6.wk-tab-12.wk-mobile-12.wk-desk-4{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+  }
+  .responsive-cell-block.wk-ipadp-6.wk-tab-12.wk-mobile-12.wk-desk-8{
+    display:flex;
+    align-items:center;
+  }
+  .responsive-cell-block.wk-tab-12.wk-mobile-12.wk-desk-4.wk-ipadp-5{
+    display:flex;
+    justify-content:flex-start;
+    flex-direction:row;
+    align-items:center;
+    padding-top:0px;
+    padding-right:25px;
+    padding-bottom:0px;
+    padding-left:0px;
+  }
+  .responsive-container-block.team-card-container{
+    justify-content:center;
+    display:flex;
+  }
+  .img-box{
+    max-width:130px;
+    max-height:130px;
+    width:100%;
+    height:100%;
+    overflow-x:hidden;
+    overflow-y:hidden;
+    margin-top:0px;
+    margin-right:25px;
+    margin-bottom:0px;
+    margin-left:0px;
+  }
+  .card{
+    background-color:rgb(255, 255, 255);
+    display:flex;
+    padding-top:16px;
+    padding-right:16px;
+    padding-bottom:16px;
+    padding-left:16px;
+    box-shadow:rgba(95, 95, 95, 0.1) 6px 12px 24px;
+    flex-direction:row;
+    border-top-left-radius:15px;
+    border-top-right-radius:15px;
+    border-bottom-right-radius:15px;
+    border-bottom-left-radius:15px;
+  }
+  .card-content-box{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+  }
+  .text-blk.person-name{
+    font-size:20px;
+    font-weight:700;
+    margin-top:0px;
+    margin-right:0px;
+    margin-bottom:5px;
+    margin-left:0px;
+  }
+  .text-blk.person-info{
+    font-size:11px;
+    line-height:15px;
+  }
+  .responsive-cell-block.wk-mobile-12.wk-ipadp-10.wk-tab-8.wk-desk-6{
+    max-width:350px;
+  }
+  .responsive-container-block.big-container{
+    justify-content:center;
+    padding-top:0px;
+    padding-right:50px;
+    padding-bottom:0px;
+    padding-left:50px;
+  }
+  #i620u{
+    border-top-left-radius:6px;
+    border-top-right-radius:6px;
+    border-bottom-right-radius:6px;
+    border-bottom-left-radius:6px;
+  }
+  .person-img{
+    width:100%;
+    height:100%;
+  }
+  #igqme{
+    border-top-left-radius:6px;
+    border-top-right-radius:6px;
+    border-bottom-right-radius:6px;
+    border-bottom-left-radius:6px;
+  }
+  #ian3z{
+    border-top-left-radius:6px;
+    border-top-right-radius:6px;
+    border-bottom-right-radius:6px;
+    border-bottom-left-radius:6px;
+  }
+  #i42h8{
+    border-top-left-radius:6px;
+    border-top-right-radius:6px;
+    border-bottom-right-radius:6px;
+    border-bottom-left-radius:6px;
+  }
+  @keyframes bounce{
+    0%, 20%, 50%, 80%, 100%{
+      transform:translateY(0px);
+    }
+    40%{
+      transform:translateY(-30px);
+    }
+    60%{
+      transform:translateY(-15px);
+    }
+    0%, 20%, 50%, 80%, 100%{
+      transform:translateY(0px);
+    }
+    40%{
+      transform:translateY(-30px);
+    }
+    60%{
+      transform:translateY(-15px);
+    }
+  }
+  @media (max-width: 1024px){
+    .responsive-container-block.team-card-container{
+      justify-content:center;
+    }
+    .text-blk.section-head{
+      font-size:50px;
+      line-height:55px;
+    }
+    .img-box{
+      max-width:109px;
+      max-height:109px;
+    }
+    .responsive-cell-block.wk-tab-12.wk-mobile-12.wk-desk-4.wk-ipadp-5{
+      padding-top:0px;
+      padding-right:20px;
+      padding-bottom:0px;
+      padding-left:0px;
+    }
+    .responsive-container-block.container{
+      justify-content:space-evenly;
+    }
+  }
+  @media (max-width: 768px){
+    .responsive-container-block.container{
+      margin-top:60px;
+      margin-right:0px;
+      margin-bottom:60px;
+      margin-left:0px;
+    }
+    .text-blk.section-subhead{
+      margin-top:0px;
+      margin-right:0px;
+      margin-bottom:0px;
+      margin-left:0px;
+    }
+    .img-box{
+      margin-top:0px;
+      margin-right:30px;
+      margin-bottom:0px;
+      margin-left:0px;
+    }
+    .content-box{
+      text-align:center;
+    }
+    .responsive-cell-block.wk-tab-12.wk-mobile-12.wk-desk-4.wk-ipadp-5{
+      margin-top:0px;
+      margin-right:0px;
+      margin-bottom:30px;
+      margin-left:0px;
+    }
+  }
+  @media (max-width: 500px){
+    .responsive-container-block.big-container{
+      padding-top:0px;
+      padding-right:60px;
+      padding-bottom:0px;
+      padding-left:60px;
+    }
+    .text-blk.section-head{
+      font-size:40px;
+      line-height:45px;
+    }
+    .content-box{
+      padding-top:0px;
+      padding-right:0px;
+      padding-bottom:0px;
+      padding-left:0px;
+    }
+    .text-blk.section-subhead{
+      font-size:12px;
+    }
+    .img-box{
+      max-width:68px;
+      max-height:68px;
+    }
+    .text-blk.person-name{
+      font-size:14px;
+      margin-top:0px;
+      margin-right:0px;
+      margin-bottom:1px;
+      margin-left:0px;
+    }
+    .content-box{
+      margin-top:0px;
+      margin-right:0px;
+      margin-bottom:46px;
+      margin-left:0px;
+      text-align:left;
+    }
+    .responsive-cell-block.wk-tab-12.wk-mobile-12.wk-desk-4.wk-ipadp-5{
+      margin-top:0px;
+      margin-right:0px;
+      margin-bottom:0px;
+      margin-left:0px;
+    }
+  } 
+  @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800&display=swap');
+  
+  *, *:before, *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+  }
+  
+  .wk-desk-1{
+    width: 8.333333%;
+  }
+  .wk-desk-2{
+    width: 16.666667%;
+  }
+  .wk-desk-3{
+    width: 25%;
+  }
+  .wk-desk-4{
+    width: 33.333333%;
+  }
+  .wk-desk-5{
+    width: 41.666667%;
+  }
+  .wk-desk-6{
+    width: 50%;
+  }
+  .wk-desk-7{
+    width: 58.333333%;
+  }
+  .wk-desk-8{
+    width: 66.666667%;
+  }
+  .wk-desk-9{
+    width: 75%;
+  }
+  .wk-desk-10{
+    width: 83.333333%;
+  }
+  .wk-desk-11{
+    width: 91.666667%;
+  }
+  .wk-desk-12{
+    width: 100%;
+  }
+  
+  @media (max-width: 1024px) {
+    .wk-ipadp-1{
+      width: 8.333333%;
+    }
+    .wk-ipadp-2{
+      width: 16.666667%;
+    }
+    .wk-ipadp-3{
+      width: 25%;
+    }
+    .wk-ipadp-4{
+      width: 33.333333%;
+    }
+    .wk-ipadp-5{
+      width: 41.666667%;
+    }
+    .wk-ipadp-6{
+      width: 50%;
+    }
+    .wk-ipadp-7{
+      width: 58.333333%;
+    }
+    .wk-ipadp-8{
+      width: 66.666667%;
+    }
+    .wk-ipadp-9{
+      width: 75%;
+    }
+    .wk-ipadp-10{
+      width: 83.333333%;
+    }
+    .wk-ipadp-11{
+      width: 91.666667%;
+    }
+    .wk-ipadp-12{
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .wk-tab-1{
+      width: 8.333333%;
+    }
+    .wk-tab-2{
+      width: 16.666667%;
+    }
+    .wk-tab-3{
+      width: 25%;
+    }
+    .wk-tab-4{
+      width: 33.333333%;
+    }
+    .wk-tab-5{
+      width: 41.666667%;
+    }
+    .wk-tab-6{
+      width: 50%;
+    }
+    .wk-tab-7{
+      width: 58.333333%;
+    }
+    .wk-tab-8{
+      width: 66.666667%;
+    }
+    .wk-tab-9{
+      width: 75%;
+    }
+    .wk-tab-10{
+      width: 83.333333%;
+    }
+    .wk-tab-11{
+      width: 91.666667%;
+    }
+    .wk-tab-12{
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 500px) {
+    .wk-mobile-1{
+      width: 8.333333%;
+    }
+    .wk-mobile-2{
+      width: 16.666667%;
+    }
+    .wk-mobile-3{
+      width: 25%;
+    }
+    .wk-mobile-4{
+      width: 33.333333%;
+    }
+    .wk-mobile-5{
+      width: 41.666667%;
+    }
+    .wk-mobile-6{
+      width: 50%;
+    }
+    .wk-mobile-7{
+      width: 58.333333%;
+    }
+    .wk-mobile-8{
+      width: 66.666667%;
+    }
+    .wk-mobile-9{
+      width: 75%;
+    }
+    .wk-mobile-10{
+      width: 83.333333%;
+    }
+    .wk-mobile-11{
+      width: 91.666667%;
+    }
+    .wk-mobile-12{
+      width: 100%;
+    }
+  }
+  </style>
+
+
+<div id="w-w-dm-id">
+    <div id="">
+      <div data-wkik-type="responsive-container-block" id="w-c-s-bgc_p-1-dm-id" class="responsive-container-block big-container">
+        <div data-wkik-type="responsive-container-block" class="responsive-container-block container">
+          <div data-wkik-type="responsive-cell-block" desktopcolspan="4" ipadprocolspan="5" tabletcolspan="12" mobilecolspan="12" id="i11j" class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-4 wk-ipadp-5">
+            <div class="content-box">
+              <p id="w-c-s-fc_p-1-dm-id" class="text-blk section-head">Biorite Team
+              </p>
+              <p id="w-c-s-fc_s-1-dm-id" class="text-blk section-subhead">We are amongst India’s most trusted health supplement brands, with a mission to make nutrition more reliable and effective. With industry-first step in the various directions such as ensure scan validity, layers of authenticity, protein test certificates, scientifically researched products, and more, Biorite has rapidly risen to become the consumer's favorite brand.
+
+                We're based on getting you fitter and healthier using our experts comprehensive analysis and experience of the ever-changing market. So make health a priority today and let us handle the rest!
+                
+                We at Biorite are driven by the desire to exceed your expectations, we have gathered the complete range of sports & bodybuilding supplements in one place.
+                
+                Greenex Nutrition (Biorite) offers the range of products that have been created with the path-breaking formulation with unmatched quality of ingredients.  Our commitment to provide research-backed products helps us in our aim to become India’s most trusted sports nutrition brand that gives you Global grade quality supplements and 100% safety assurance at an affordable price.   
+              </p>
+            </div>
+          </div>
+          <div data-wkik-type="responsive-cell-block" desktopcolspan="8" ipadprocolspan="6" tabletcolspan="12" mobilecolspan="12" id="ix8g" class="responsive-cell-block wk-ipadp-6 wk-tab-12 wk-mobile-12 wk-desk-8">
+            <div data-wkik-type="responsive-container-block" class="responsive-container-block team-card-container">
+              <div data-wkik-type="responsive-cell-block" desktopcolspan="6" ipadprocolspan="10" tabletcolspan="8" mobilecolspan="12" id="i2n1k" class="responsive-cell-block wk-mobile-12 wk-ipadp-10 wk-tab-8 wk-desk-6">
+                <div class="card">
+                  <div class="img-box">
+                    <img id="i620u" src="{% static '' %}img/ceo.jpeg" class="person-img"/>
+                  </div>
+                  <div class="card-content-box">
+                    <p class="text-blk person-name">Gautam Singh
+                    </p>
+                    <p id="w-c-s-fc_t-1-dm-id" style='font-size: 12px;' class="text-blk person-info">Managing Director
+                    </p>
+                    <li><a href="https://www.linkedin.com/in/sagar-singh-b3a9ab164"  style="color: #0077b5"><i class="fa fa-linkedin fa-2x"></i></a></li>
+                  </div>
+                </div>
+              </div>
+              <div data-wkik-type="responsive-cell-block" desktopcolspan="6" ipadprocolspan="10" tabletcolspan="8" mobilecolspan="12" class="responsive-cell-block wk-mobile-12 wk-ipadp-10 wk-tab-8 wk-desk-6">
+                <div class="card">
+                  <div class="img-box">
+                    <img  src="{% static '' %}img/Sales_Head.jpeg" id="igqme" class="person-img"/>
+                  </div>
+                  <div class="card-content-box">
+                    <p class="text-blk person-name">Rakesh Kumar
+                    </p>
+                    <p id="w-c-s-fc_t-1-dm-id-4" class="text-blk person-info">National Sales Head
+                    </p>
+                    <li><a href="https://instagram.com/r_akesh95?igshid=YmMyMTA2M2Y="  style="color: #0077b5"><i class="fa fa-instagram fa-2x"></i></a></li>
+                  
+                  </div>
+                </div>
+              </div>
+              <div data-wkik-type="responsive-cell-block" desktopcolspan="6" ipadprocolspan="10" tabletcolspan="8" mobilecolspan="12" class="responsive-cell-block wk-mobile-12 wk-ipadp-10 wk-tab-8 wk-desk-6">
+                <div class="card">
+                  <div class="img-box">
+                    <img  src="{% static '' %}img/IT_HEAD.PNG" id="i42h8" class="person-img"/>
+                  </div>
+                  <div class="card-content-box">
+                    <p class="text-blk person-name">Manish Yadav
+                    </p>
+                    <p id="w-c-s-fc_t-1-dm-id-2" style='font-size: 12px;'class="text-blk person-info">IT Head
+                    </p>
+                    <li><a href="https://www.linkedin.com/in/manish-yadav-b325667a/"  style="color: #0077b5"><i class="fa fa-linkedin fa-2x"></i></a></li>
+                  </div>
+                </div>
+              </div>
+              <div data-wkik-type="responsive-cell-block" desktopcolspan="6" ipadprocolspan="10" tabletcolspan="8" mobilecolspan="12" class="responsive-cell-block wk-mobile-12 wk-ipadp-10 wk-tab-8 wk-desk-6">
+                <div class="card">
+                  <div class="img-box">
+                    <img src="{% static '' %}img/markeing.jpeg" id="ian3z" class="person-img"/>
+                  </div>
+                  <div class="card-content-box">
+                    <p class="text-blk person-name">Mrs. Sonia
+                    </p>
+                    <p id="w-c-s-fc_t-1-dm-id-3" class="text-blk person-info">Marketing Head
+                    </p>
+                    <li><a href="https://www.bioritehealthcare.com/"  style="color: #0077b5"><i class="fa fa-linkedin fa-2x"></i></a></li>
+                  
+                  </div>
+                </div>
+              </div>
+              <div data-wkik-type="responsive-cell-block" desktopcolspan="6" ipadprocolspan="10" tabletcolspan="8" mobilecolspan="12" class="responsive-cell-block wk-mobile-12 wk-ipadp-10 wk-tab-8 wk-desk-6">
+                <div class="card">
+                  <div class="img-box">
+                    <img  src="{% static '' %}img/accountant.jpeg" id="igqme" class="person-img"/>
+                  </div>
+                  <div class="card-content-box">
+                    <p class="text-blk person-name">Mr. Khan
+                    </p>
+                    <p id="w-c-s-fc_t-1-dm-id-4" class="text-blk person-info">Accountant
+                    </p>
+                    <li><a href="https://www.bioritehealthcare.com/"  style="color: #0077b5"><i class="fa fa-linkedin fa-2x"></i></a></li>
+                  
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> 
+
+
+  {% endblock %}

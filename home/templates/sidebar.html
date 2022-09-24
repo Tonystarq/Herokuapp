@@ -1,0 +1,112 @@
+{% load static %}
+{% load i18n %}
+
+<!-- NAVIGATION -->
+<div id="navigation" style="background-color:#000000">
+    <!-- container -->
+    <div class="container">
+        <div id="responsive-nav">
+            <!-- category nav -->
+            {% if page %}
+                <div class="category-nav">
+            {% else %}
+                <div class="category-nav show-on-click">
+            {% endif %}
+
+            <span class="category-header">{% trans "Categories" %} <i class="fa fa-list"></i></span>
+
+
+            {% load myapptags %}
+            {% if LANGUAGE_CODE is None %}
+                {% get_current_language as LANGUAGE_CODE %}
+                {% categoryTree 0 '' LANGUAGE_CODE as category %}
+            {% else %}
+                {% categoryTree 0 '' 'en' as category %}
+            {% endif %}
+
+
+            <ul class="category-list">
+                {{ category | safe  }}
+            </ul>
+
+            </div>
+            <!-- /category nav -->
+
+            <!-- menu nav -->
+            <div class="menu-nav">
+                <span class="menu-header">Menu <i class="fa fa-bars"></i></span>
+                <ul class="menu-list">
+                    <li><a href="{% url 'home' %}" >{% trans "Home" %}</a></li>
+                    <li><a href="{% url 'shopnow' %}" >{% trans "Shop Now" %}</a></li>
+                    <li><a href="{% url 'blog' %}" >{% trans "Blog" %}</a></li>
+                    <li><a href="{% url 'faq' %}">{% trans "FAQ" %}</a></li>
+                    <li><a href="">{% trans "Verify" %}</a></li>
+                    <li><a href="{% url 'aboutus' %}">{% trans "About Us" %}</a></li>
+                    <li><a href="{% url 'contactus' %}" >{% trans "Contact Us" %}</a></li>
+
+
+                </ul>
+            </div>
+            <!-- menu nav -->
+            </div>
+        </div>
+        <!-- /container -->
+    </div>
+    <!-- /NAVIGATION -->
+
+    <div id="navigation" style="background-color:#000000">
+        <!-- container -->
+        <div class="container">
+            <div id="responsive-nav">
+                <!-- category nav -->
+                {% if page %}
+                    <div class="category-nav">
+                {% else %}
+                    <div class="category-nav show-on-click">
+                {% endif %}
+    
+               
+    
+    
+                {% load myapptags %}
+                {% if LANGUAGE_CODE is None %}
+                    {% get_current_language as LANGUAGE_CODE %}
+                    {% categoryTree 0 '' LANGUAGE_CODE as category %}
+                {% else %}
+                    {% categoryTree 0 '' 'en' as category %}
+                {% endif %}
+    
+    
+                <ul class="category-list">
+                    {{ category | safe  }}
+                </ul>
+    
+                </div>
+                <!-- /category nav -->
+    
+                <!-- menu nav -->
+                <div class="menu-nav">
+                    <span class="menu-header">Menu <i class="fa fa-bars"></i></span>
+                    <ul class="menu-list">
+                        <li><a></a></li>
+                        <li><a></a></li>
+                        <li ><a href="" >{% trans "Quality Guaranteed" %}</a></li>
+                        <li><a></a></li>
+                        <li><a></a></li>
+                        <li><a href="" >{% trans "100% Original Product" %}</a></li>
+                        <li><a></a></li>
+                        <li><a></a></li>
+                        <li><a href="" class="fa fa-truck" >{% trans " Delivery PAN India" %}</a></li>
+                        <li><a></a></li>
+                        <li><a></a></li>
+                        <li><a href="" class="fa fa-mobile" aria-hidden="true" >{% trans " Ask Our Experts: +91 9999531838" %}</a></li>
+    
+    
+                    </ul>
+                </div>
+                <!-- menu nav -->
+                </div>
+            </div>
+            <!-- /container -->
+        </div>
+        <!-- /NAVIGATION -->
